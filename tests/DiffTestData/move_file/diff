@@ -1,0 +1,4 @@
+diff --git a/TestClass.php b/src/TestClass.php
+similarity index 100%
+rename from TestClass.php
+rename to src/TestClass.php

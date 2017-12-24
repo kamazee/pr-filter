@@ -1,0 +1,15 @@
+diff --git a/src/MyClass.php b/src/MyBiggerClass.php
+similarity index 89%
+rename from src/MyClass.php
+rename to src/MyBiggerClass.php
+index d529df8..a73b08e 100644
+--- a/src/MyClass.php
++++ b/src/MyBiggerClass.php
+@@ -1,6 +1,6 @@
+ <?php
+ 
+-class MyClass
++class MyBiggerClass
+ {
+     public function foo()
+     {

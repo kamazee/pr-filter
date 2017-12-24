@@ -1,0 +1,10 @@
+diff --git a/TestClass.php b/TestClass.php
+index 325d31c..8f7c1ef 100644
+--- a/TestClass.php
++++ b/TestClass.php
+@@ -2,5 +2,4 @@
+ 
+ class TestClass
+ {
+-
+ }

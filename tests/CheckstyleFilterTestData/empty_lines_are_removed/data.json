@@ -1,0 +1,9 @@
+{
+  "new_code": {
+    "src/MyBiggerClass.php": {
+      "11": true
+    }
+  },
+  "base_path": "/home/alex/oss/report_filter_tests",
+  "compare_filtered_xml_as_string": true
+}

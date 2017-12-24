@@ -1,0 +1,30 @@
+{
+  "files": ["src/MyClass.php"],
+  "lines": [
+    {
+      "file": "src/MyClass.php",
+      "line": 1,
+      "result": true
+    },
+    {
+      "file": "src/MyClass.php",
+      "line": 2,
+      "result": true
+    },
+    {
+      "file": "src/MyClass.php",
+      "line": 3,
+      "result": true
+    },
+    {
+      "file": "src/MyClass.php",
+      "line": 4,
+      "result": true
+    },
+    {
+      "file": "src/MyClass.php",
+      "line": 5,
+      "result": true
+    }
+  ]
+}

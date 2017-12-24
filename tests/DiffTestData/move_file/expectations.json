@@ -1,0 +1,30 @@
+{
+  "files": [],
+  "lines": [
+    {
+      "file": "src/TestClass.php",
+      "line": 1,
+      "result": false
+    },
+    {
+      "file": "src/TestClass.php",
+      "line": 2,
+      "result": false
+    },
+    {
+      "file": "src/TestClass.php",
+      "line": 3,
+      "result": false
+    },
+    {
+      "file": "src/TestClass.php",
+      "line": 4,
+      "result": false
+    },
+    {
+      "file": "src/TestClass.php",
+      "line": 5,
+      "result": false
+    }
+  ]
+}

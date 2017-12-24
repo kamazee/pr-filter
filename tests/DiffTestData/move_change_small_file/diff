@@ -1,0 +1,22 @@
+diff --git a/src/MyClass.php b/src/MyClass.php
+new file mode 100644
+index 0000000..c0e5ddd
+--- /dev/null
++++ b/src/MyClass.php
+@@ -0,0 +1,5 @@
++<?php
++
++class MyClass
++{
++}
+diff --git a/src/TestClass.php b/src/TestClass.php
+deleted file mode 100644
+index 8f7c1ef..0000000
+--- a/src/TestClass.php
++++ /dev/null
+@@ -1,5 +0,0 @@
+-<?php
+-
+-class TestClass
+-{
+-}

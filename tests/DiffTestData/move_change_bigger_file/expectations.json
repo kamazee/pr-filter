@@ -1,0 +1,25 @@
+{
+  "files": ["src/MyBiggerClass.php"],
+  "lines": [
+    {
+      "file": "src/MyBiggerClass.php",
+      "line": 1,
+      "result": false
+    },
+    {
+      "file": "src/MyBiggerClass.php",
+      "line": 2,
+      "result": false
+    },
+    {
+      "file": "src/MyBiggerClass.php",
+      "line": 3,
+      "result": true
+    },
+    {
+      "file": "src/MyBiggerClass.php",
+      "line": 4,
+      "result": false
+    }
+  ]
+}
