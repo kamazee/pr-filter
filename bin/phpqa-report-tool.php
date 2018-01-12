@@ -28,4 +28,20 @@ $application->command(
         'e.g. /var/www/src/MyClass.php with -b /var/www will be treated as src/MyClass.php'
 ]);
 
+$application->command(
+    'config-phpcs infile [outfile]',
+    \Kamazee\PhpqaReportTool\Command\SetAnalyzedFilesPhpcs::class
+)->descriptions('Set list of files passed to stdin (one per line) into a phpcs config', [
+    'infile' => 'File to read and set list of files into',
+    'outfile' => 'File to write updated config into (if omitted, overrides infile)'
+]);
+
+$application->command(
+    'config-phan infile [outfile]',
+    \Kamazee\PhpqaReportTool\Command\SetAnalyzedFilesPhan::class
+)->descriptions('Set list of files passed to stdin (one per line) into a phan config', [
+    'infile' => 'File to read and set list of files into',
+    'outfile' => 'File to write updated config into (if omitted, overrides infile)'
+]);
+
 $application->run();
