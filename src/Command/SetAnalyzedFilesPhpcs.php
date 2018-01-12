@@ -18,19 +18,19 @@ class SetAnalyzedFilesPhpcs
     }
 
     /**
-     * @param string $dist
-     * @param string $output
+     * @param string $infile
+     * @param string $outfile
      * @throws \Kamazee\PhpqaReportTool\Phpcs\ConfigException
      */
-    public function __invoke(string $dist, string $output)
+    public function __invoke(string $infile, string $outfile = null)
     {
-        if (null === $output) {
-            $output = $dist;
+        if (null === $outfile) {
+            $outfile = $infile;
         }
 
         $analyzedFiles = $this->fileListReader->read('php://stdin');
-        $config = $this->factory->createWithFilename($dist);
+        $config = $this->factory->createWithFilename($infile);
         $config->setAnalyzedFiles($analyzedFiles);
-        $config->write($output);
+        $config->write($outfile);
     }
 }

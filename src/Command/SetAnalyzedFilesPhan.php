@@ -3,7 +3,6 @@
 namespace Kamazee\PhpqaReportTool\Command;
 
 use Kamazee\PhpqaReportTool\Phan\Config;
-use Symfony\Component\Console\Input\InputInterface;
 
 class SetAnalyzedFilesPhan
 {
@@ -15,22 +14,21 @@ class SetAnalyzedFilesPhan
     }
 
     /**
-     * @param InputInterface $input
-     * @param string $dist
-     * @param string|null $output
+     * @param string $infile
+     * @param string|null $outfile
      *
      * @throws \Kamazee\PhpqaReportTool\Phan\ConfigException
      */
-    public function __invoke(InputInterface $input, string $dist, string $output = null)
+    public function __invoke(string $infile, string $outfile = null)
     {
-        if (null === $output) {
-            $output = $dist;
+        if (null === $outfile) {
+            $outfile = $infile;
         }
 
         $analyzedFiles = $this->reader->read('php://stdin');
 
-        $config = new Config($dist);
+        $config = new Config($infile);
         $config->setAnalyzedFiles($analyzedFiles);
-        $config->write($output);
+        $config->write($outfile);
     }
 }
