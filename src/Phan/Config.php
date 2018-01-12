@@ -57,7 +57,7 @@ class Config
      */
     public function setAnalyzedFiles(array $filenames)
     {
-        $this->config['file_list'] = $filenames;
+        $this->config['include_analysis_file_list'] = $filenames;
     }
 
     /**

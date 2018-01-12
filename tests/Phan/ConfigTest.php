@@ -157,7 +157,7 @@ class ConfigTest extends TestCase
     {
         $changedFiles = ['test1.php', 'test2.php'];
         $expectedConfig = [
-            'file_list' => $changedFiles,
+            'include_analysis_file_list' => $changedFiles,
         ];
 
         $input = vfsStream::newFile('config.php')
