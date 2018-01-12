@@ -2,8 +2,10 @@
 
 namespace Kamazee\PhpqaReportTool\Checkstyle;
 
-use DOMDocument;
 use Kamazee\PhpqaReportTool\Diff\Diff;
+use Kamazee\PhpqaReportTool\Filesystem\FileException;
+use Kamazee\PhpqaReportTool\Xml\Exception as XmlException;
+use Kamazee\PhpqaReportTool\Xml\Loader;
 use Kamazee\PhpqaReportTool\Xml\Node;
 use const DIRECTORY_SEPARATOR;
 use function strlen;
@@ -13,10 +15,12 @@ use function substr;
 class Filter
 {
     private $diff;
+    private $loader;
 
-    public function __construct(Diff $diff)
+    public function __construct(Loader $loader, Diff $diff)
     {
         $this->diff = $diff;
+        $this->loader = $loader;
     }
 
     public function filter($inputFilename, $outputFilename, $basePath = null)
@@ -25,8 +29,12 @@ class Filter
             $basePath = rtrim($basePath, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR;
         }
 
-        $xml = new DOMDocument();
-        $xml->load($inputFilename);
+        try {
+            $xml = $this->loader->loadFromFile($inputFilename);
+        } catch (XmlException $e) {
+            throw FilterException::cantReadCheckstyle($e, $inputFilename);
+        }
+
         $checkstyle = new Node($xml->documentElement);
         $filesInCheckstyle = 0;
         $filesFilteredOut = 0;

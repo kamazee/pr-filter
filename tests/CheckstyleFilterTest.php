@@ -5,8 +5,12 @@ namespace Kamazee\PhpqaReportTool;
 use function array_key_exists;
 use DirectoryIterator;
 use Kamazee\PhpqaReportTool\Checkstyle\Filter;
+use Kamazee\PhpqaReportTool\Checkstyle\FilterException;
 use Kamazee\PhpqaReportTool\Diff\Diff;
+use Kamazee\PhpqaReportTool\Filesystem\FileFactory;
+use Kamazee\PhpqaReportTool\Xml\Loader;
 use org\bovigo\vfs\vfsStream;
+use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
 use ReflectionProperty;
@@ -14,6 +18,7 @@ use const DIRECTORY_SEPARATOR;
 use function file_get_contents;
 use function json_decode;
 use SplFileInfo;
+use Kamazee\PhpqaReportTool\Xml\Exception as XmlException;
 
 class CheckstyleFilterTest extends TestCase
 {
@@ -22,6 +27,7 @@ class CheckstyleFilterTest extends TestCase
     /**
      * @dataProvider getCases
      * @param string $directoryName
+     * @throws Checkstyle\FilterException
      */
     public function test($directoryName)
     {
@@ -35,7 +41,7 @@ class CheckstyleFilterTest extends TestCase
             true
         );
         $diff = $this->getDiffMock($data['new_code']);
-        $checkstyle = new Filter($diff);
+        $checkstyle = new Filter(new Loader(new FileFactory()), $diff);
         $output = $vfs->url() . '/checkstyle-filtered.xml';
         $checkstyle->filter(
             $base . DIRECTORY_SEPARATOR . 'checkstyle.xml',
@@ -63,6 +69,35 @@ class CheckstyleFilterTest extends TestCase
         }
     }
 
+    public function testThrowsWhenCantLoadFile()
+    {
+        $file = 'test.xml';
+
+        /** @var Loader|MockObject $loader */
+        $loader = $this->getMockBuilder(Loader::class)
+            ->disableOriginalConstructor()
+            ->setMethods(['loadFromFile'])
+            ->getMock();
+
+        $loader->expects($this->once())
+            ->method('loadFromFile')
+            ->with($file)
+            ->willThrowException(
+                FilterException::cantReadCheckstyle(
+                    XmlException::cantLoadXmlFromFile($file, []),
+                    $file
+                )
+            );
+
+        /** @var Diff|MockObject $diff */
+        $diff = $this->getMockBuilder(Diff::class)
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $this->expectException(FilterException::class);
+
+        (new Filter($loader, $diff))->filter($file, $file);
+    }
 
     public static function getCases()
     {
