@@ -10,7 +10,7 @@ $application = new Application();
 $application->useContainer($container, true, true);
 
 $application->command(
-    'diff-list-files diff',
+    'diff-files diff',
     \Kamazee\PhpqaReportTool\Command\ShowChangedFiles::class
 );
 
