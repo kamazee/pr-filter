@@ -1,7 +1,5 @@
 <?php
 
-use Kamazee\PhpqaReportTool\Command\FilterCheckstyle as FilterCheckstyleCommand;
-use Kamazee\PhpqaReportTool\Command\ShowChangedFiles as ShowChangedFilesCommand;
 use Silly\Application;
 
 /** @var \DI\Container $container */
@@ -13,12 +11,12 @@ $application->useContainer($container, true, true);
 
 $application->command(
     'diff-list-files diff',
-    ShowChangedFilesCommand::class
+    \Kamazee\PhpqaReportTool\Command\ShowChangedFiles::class
 );
 
 $application->command(
     'filter-checkstyle [-b|--base-path=] diff infile [outfile]',
-    FilterCheckstyleCommand::class
+    \Kamazee\PhpqaReportTool\Command\FilterCheckstyle::class
 )->descriptions('Filter checkstyle.xml according to a diff', [
     'diff' => 'Path to diff file, e.g. ./build/pull_request.diff',
     'infile' => 'Path to checkstyle.xml to be filtered), ' .
