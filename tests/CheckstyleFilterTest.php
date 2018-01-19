@@ -1,14 +1,14 @@
 <?php
 
-namespace Kamazee\PhpqaReportTool;
+namespace Kamazee\PrFilter;
 
 use function array_key_exists;
 use DirectoryIterator;
-use Kamazee\PhpqaReportTool\Checkstyle\Filter;
-use Kamazee\PhpqaReportTool\Checkstyle\FilterException;
-use Kamazee\PhpqaReportTool\Diff\Diff;
-use Kamazee\PhpqaReportTool\Filesystem\FileFactory;
-use Kamazee\PhpqaReportTool\Xml\Loader;
+use Kamazee\PrFilter\Checkstyle\Filter;
+use Kamazee\PrFilter\Checkstyle\FilterException;
+use Kamazee\PrFilter\Diff\Diff;
+use Kamazee\PrFilter\Filesystem\FileFactory;
+use Kamazee\PrFilter\Xml\Loader;
 use org\bovigo\vfs\vfsStream;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
@@ -18,7 +18,7 @@ use const DIRECTORY_SEPARATOR;
 use function file_get_contents;
 use function json_decode;
 use SplFileInfo;
-use Kamazee\PhpqaReportTool\Xml\Exception as XmlException;
+use Kamazee\PrFilter\Xml\Exception as XmlException;
 
 class CheckstyleFilterTest extends TestCase
 {

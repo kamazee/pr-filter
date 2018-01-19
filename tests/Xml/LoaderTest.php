@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace Kamazee\PhpqaReportTool\Xml;
+namespace Kamazee\PrFilter\Xml;
 
-use Kamazee\PhpqaReportTool\Filesystem\File;
-use Kamazee\PhpqaReportTool\Filesystem\FileException;
-use Kamazee\PhpqaReportTool\Filesystem\FileFactory;
+use Kamazee\PrFilter\Filesystem\File;
+use Kamazee\PrFilter\Filesystem\FileException;
+use Kamazee\PrFilter\Filesystem\FileFactory;
 use org\bovigo\vfs\vfsStream;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;

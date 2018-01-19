@@ -1,6 +1,6 @@
 <?php
 
-namespace Kamazee\PhpqaReportTool\Diff;
+namespace Kamazee\PrFilter\Diff;
 
 use ptlis\DiffParser\Changeset;
 use ptlis\DiffParser\File;

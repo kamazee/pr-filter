@@ -1,6 +1,6 @@
 <?php
 
-namespace Kamazee\PhpqaReportTool\Filesystem;
+namespace Kamazee\PrFilter\Filesystem;
 
 class FileFactory
 {

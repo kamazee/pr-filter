@@ -1,8 +1,8 @@
 <?php
 
-namespace Kamazee\PhpqaReportTool\Filesystem;
+namespace Kamazee\PrFilter\Filesystem;
 
-use Kamazee\PhpqaReportTool\Exception;
+use Kamazee\PrFilter\Exception;
 use function sprintf;
 
 class FileException extends Exception

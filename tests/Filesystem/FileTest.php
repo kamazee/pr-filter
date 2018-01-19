@@ -1,6 +1,6 @@
 <?php
 
-namespace Kamazee\PhpqaReportTool\Filesystem;
+namespace Kamazee\PrFilter\Filesystem;
 
 use org\bovigo\vfs\vfsStream;
 use org\bovigo\vfs\vfsStreamDirectory;

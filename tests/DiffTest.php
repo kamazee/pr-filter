@@ -1,11 +1,11 @@
 <?php
 
-namespace Kamazee\PhpqaReportTool;
+namespace Kamazee\PrFilter;
 
 use DI\ContainerBuilder;
 use DirectoryIterator;
 use Exception;
-use Kamazee\PhpqaReportTool\Diff\Factory;
+use Kamazee\PrFilter\Diff\Factory;
 use PHPUnit\Framework\TestCase;
 use SplFileInfo;
 use stdClass;

@@ -1,8 +1,8 @@
 <?php
 
-namespace Kamazee\PhpqaReportTool\Command;
+namespace Kamazee\PrFilter\Command;
 
-use Kamazee\PhpqaReportTool\Diff\Factory;
+use Kamazee\PrFilter\Diff\Factory;
 use Symfony\Component\Console\Output\OutputInterface;
 
 class ShowChangedFiles

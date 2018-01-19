@@ -1,6 +1,6 @@
 <?php
 
-namespace Kamazee\PhpqaReportTool\Xml;
+namespace Kamazee\PrFilter\Xml;
 
 use DOMDocument;
 use PHPUnit\Framework\TestCase;

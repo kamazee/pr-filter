@@ -1,6 +1,6 @@
 <?php
 
-namespace Kamazee\PhpqaReportTool\Phpcs;
+namespace Kamazee\PrFilter\Phpcs;
 
 use DOMDocument;
 use function file_get_contents;

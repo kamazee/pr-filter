@@ -1,9 +1,9 @@
 <?php
 
-namespace Kamazee\PhpqaReportTool\Phpcs;
+namespace Kamazee\PrFilter\Phpcs;
 
-use Kamazee\PhpqaReportTool\Exception;
-use Kamazee\PhpqaReportTool\Xml\Exception as XmlException;
+use Kamazee\PrFilter\Exception;
+use Kamazee\PrFilter\Xml\Exception as XmlException;
 
 class ConfigException extends Exception
 {

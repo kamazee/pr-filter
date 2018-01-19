@@ -1,6 +1,6 @@
 <?php
 
-namespace Kamazee\PhpqaReportTool;
+namespace Kamazee\PrFilter;
 
 use Exception;
 use SplFileInfo;

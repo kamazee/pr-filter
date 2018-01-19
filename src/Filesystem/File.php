@@ -1,6 +1,6 @@
 <?php
 
-namespace Kamazee\PhpqaReportTool\Filesystem;
+namespace Kamazee\PrFilter\Filesystem;
 
 use function error_get_last;
 use function file_exists;

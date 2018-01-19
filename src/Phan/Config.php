@@ -1,9 +1,9 @@
 <?php
 
-namespace Kamazee\PhpqaReportTool\Phan;
+namespace Kamazee\PrFilter\Phan;
 
-use Kamazee\PhpqaReportTool\Filesystem\File;
-use Kamazee\PhpqaReportTool\Filesystem\FileException;
+use Kamazee\PrFilter\Filesystem\File;
+use Kamazee\PrFilter\Filesystem\FileException;
 use function error_get_last;
 use function file_put_contents;
 use function var_export;

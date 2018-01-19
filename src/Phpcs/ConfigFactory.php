@@ -1,11 +1,11 @@
 <?php
 
-namespace Kamazee\PhpqaReportTool\Phpcs;
+namespace Kamazee\PrFilter\Phpcs;
 
 use DOMDocument;
 use DOMElement;
-use Kamazee\PhpqaReportTool\Xml\Exception;
-use Kamazee\PhpqaReportTool\Xml\Loader;
+use Kamazee\PrFilter\Xml\Exception;
+use Kamazee\PrFilter\Xml\Loader;
 
 class ConfigFactory
 {

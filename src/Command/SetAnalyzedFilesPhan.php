@@ -1,8 +1,8 @@
 <?php
 
-namespace Kamazee\PhpqaReportTool\Command;
+namespace Kamazee\PrFilter\Command;
 
-use Kamazee\PhpqaReportTool\Phan\Config;
+use Kamazee\PrFilter\Phan\Config;
 
 class SetAnalyzedFilesPhan
 {
@@ -17,7 +17,7 @@ class SetAnalyzedFilesPhan
      * @param string $infile
      * @param string|null $outfile
      *
-     * @throws \Kamazee\PhpqaReportTool\Phan\ConfigException
+     * @throws \Kamazee\PrFilter\Phan\ConfigException
      */
     public function __invoke(string $infile, string $outfile = null)
     {

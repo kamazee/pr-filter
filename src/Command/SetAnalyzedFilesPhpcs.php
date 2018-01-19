@@ -1,8 +1,8 @@
 <?php
 
-namespace Kamazee\PhpqaReportTool\Command;
+namespace Kamazee\PrFilter\Command;
 
-use Kamazee\PhpqaReportTool\Phpcs\ConfigFactory;
+use Kamazee\PrFilter\Phpcs\ConfigFactory;
 
 class SetAnalyzedFilesPhpcs
 {
@@ -20,7 +20,7 @@ class SetAnalyzedFilesPhpcs
     /**
      * @param string $infile
      * @param string $outfile
-     * @throws \Kamazee\PhpqaReportTool\Phpcs\ConfigException
+     * @throws \Kamazee\PrFilter\Phpcs\ConfigException
      */
     public function __invoke(string $infile, string $outfile = null)
     {

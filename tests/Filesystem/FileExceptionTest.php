@@ -1,6 +1,6 @@
 <?php
 
-namespace Kamazee\PhpqaReportTool\Filesystem;
+namespace Kamazee\PrFilter\Filesystem;
 
 use PHPUnit\Framework\TestCase;
 use function error_clear_last;

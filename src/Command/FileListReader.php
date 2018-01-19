@@ -1,6 +1,6 @@
 <?php
 
-namespace Kamazee\PhpqaReportTool\Command;
+namespace Kamazee\PrFilter\Command;
 
 class FileListReader
 {

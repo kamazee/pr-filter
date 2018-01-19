@@ -1,10 +1,10 @@
 <?php
 
-namespace Kamazee\PhpqaReportTool\Xml;
+namespace Kamazee\PrFilter\Xml;
 
 use DOMElement;
-use Kamazee\PhpqaReportTool\Exception as BaseException;
-use Kamazee\PhpqaReportTool\Filesystem\FileException;
+use Kamazee\PrFilter\Exception as BaseException;
+use Kamazee\PrFilter\Filesystem\FileException;
 use LibXMLError;
 
 class Exception extends BaseException

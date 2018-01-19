@@ -1,10 +1,10 @@
 <?php
 
-namespace Kamazee\PhpqaReportTool\Phpcs;
+namespace Kamazee\PrFilter\Phpcs;
 
 use DOMDocument;
 use DOMElement;
-use Kamazee\PhpqaReportTool\Xml\Node;
+use Kamazee\PrFilter\Xml\Node;
 
 class Config
 {

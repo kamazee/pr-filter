@@ -1,12 +1,12 @@
 <?php
 
-namespace Kamazee\PhpqaReportTool\Checkstyle;
+namespace Kamazee\PrFilter\Checkstyle;
 
-use Kamazee\PhpqaReportTool\Diff\Diff;
-use Kamazee\PhpqaReportTool\Filesystem\FileException;
-use Kamazee\PhpqaReportTool\Xml\Exception as XmlException;
-use Kamazee\PhpqaReportTool\Xml\Loader;
-use Kamazee\PhpqaReportTool\Xml\Node;
+use Kamazee\PrFilter\Diff\Diff;
+use Kamazee\PrFilter\Filesystem\FileException;
+use Kamazee\PrFilter\Xml\Exception as XmlException;
+use Kamazee\PrFilter\Xml\Loader;
+use Kamazee\PrFilter\Xml\Node;
 use const DIRECTORY_SEPARATOR;
 use function strlen;
 use function strpos;

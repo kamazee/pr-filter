@@ -1,9 +1,9 @@
 <?php
 
-namespace Kamazee\PhpqaReportTool\Phan;
+namespace Kamazee\PrFilter\Phan;
 
-use Kamazee\PhpqaReportTool\Exception;
-use Kamazee\PhpqaReportTool\Filesystem\FileException;
+use Kamazee\PrFilter\Exception;
+use Kamazee\PrFilter\Filesystem\FileException;
 
 class ConfigException extends Exception
 {

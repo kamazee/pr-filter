@@ -1,10 +1,10 @@
 <?php
 
-namespace Kamazee\PhpqaReportTool\Xml;
+namespace Kamazee\PrFilter\Xml;
 
 use DOMDocument;
-use Kamazee\PhpqaReportTool\Filesystem\FileException;
-use Kamazee\PhpqaReportTool\Filesystem\FileFactory;
+use Kamazee\PrFilter\Filesystem\FileException;
+use Kamazee\PrFilter\Filesystem\FileFactory;
 use const LIBXML_NONET;
 use function libxml_get_errors;
 use function libxml_use_internal_errors;
