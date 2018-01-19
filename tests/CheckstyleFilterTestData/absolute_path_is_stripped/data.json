@@ -3,5 +3,6 @@
     "src/MyBiggerClass.php": {
       "11": true
     }
-  }
+  },
+  "base_path": "/var/www"
 }

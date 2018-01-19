@@ -39,7 +39,7 @@ class CheckstyleFilterTest extends TestCase
                 $base . DIRECTORY_SEPARATOR . 'data.json'
             ),
             true
-        );
+        ) + ['base_path' => null];
         $diff = $this->getDiffMock($data['new_code']);
         $checkstyle = new Filter(new Loader(new FileFactory()), $diff);
         $output = $vfs->url() . '/checkstyle-filtered.xml';

@@ -105,6 +105,15 @@ class Node
     }
 
     /**
+     * @param string $name
+     * @param string $value
+     */
+    public function setAttribute(string $name, string $value): void
+    {
+        $this->element->setAttribute($name, $value);
+    }
+
+    /**
      * Returns children in backward order to allow easy removals
      */
     private function getAllChildrenBackwards()

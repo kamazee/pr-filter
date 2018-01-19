@@ -47,6 +47,7 @@ class Filter
             $filename = $file->getAttribute('name');
             if (null !== $basePath && 0 === strpos($filename, $basePath)) {
                 $filename = substr($filename, strlen($basePath));
+                $file->setAttribute('name', $filename);
             }
 
             $errorsInFile = 0;

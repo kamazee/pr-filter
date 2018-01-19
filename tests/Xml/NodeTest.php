@@ -114,6 +114,20 @@ class NodeTest extends TestCase
         }
     }
 
+    public function testSetAttribute()
+    {
+        $xml = '<checkstyle/>';
+        $expectedXml = '<checkstyle version="3.0.0"/>';
+        $dom = self::getDom($xml);
+        $node = self::getRootNodeForDom($dom);
+        $node->setAttribute('version', '3.0.0');
+
+        self::assertXmlStringEqualsXmlString(
+            self::getCompleteXml($expectedXml),
+            $dom->saveXML()
+        );
+    }
+
     private static function getDom($xml)
     {
         $dom = new DOMDocument();
