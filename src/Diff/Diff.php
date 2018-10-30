@@ -43,9 +43,4 @@ class Diff
     {
         return isset($this->files[$file][$line]);
     }
-
-    public function getNewAndChangedFiles()
-    {
-        return array_keys($this->files);
-    }
 }
