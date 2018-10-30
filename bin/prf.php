@@ -34,12 +34,4 @@ $application->command(
     'outfile' => 'File to write updated config into (if omitted, overrides infile)'
 ]);
 
-$application->command(
-    'config-phan infile [outfile]',
-    \Kamazee\PrFilter\Command\SetAnalyzedFilesPhan::class
-)->descriptions('Set list of files passed to stdin (one per line) into a phan config', [
-    'infile' => 'File to read and set list of files into',
-    'outfile' => 'File to write updated config into (if omitted, overrides infile)'
-]);
-
 $application->run();
