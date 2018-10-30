@@ -10,11 +10,6 @@ $application = new Application();
 $application->useContainer($container, true, true);
 
 $application->command(
-    'diff-files diff',
-    \Kamazee\PrFilter\Command\ShowChangedFiles::class
-);
-
-$application->command(
     'filter-checkstyle [-b|--base-path=] diff infile [outfile]',
     \Kamazee\PrFilter\Command\FilterCheckstyle::class
 )->descriptions('Filter checkstyle.xml according to a diff', [

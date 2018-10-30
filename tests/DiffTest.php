@@ -59,18 +59,6 @@ class DiffTest extends TestCase
                 "{$expectation->file}:{$expectation->line}"
             );
         }
-
-        $actualFiles = $diff->getNewAndChangedFiles();
-        $expectedFiles = $expectations->files;
-
-        sort($actualFiles);
-        sort($expectedFiles);
-
-        self::assertEquals(
-            $expectedFiles,
-            $actualFiles,
-            "Changed and new files in {$directory->getFilename()}"
-        );
     }
 
     public static function getCases()
