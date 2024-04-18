@@ -4,7 +4,7 @@
   "license": "MIT",
   "keywords": ["filter", "diff", "checkstyle", "phpcs", "phan", "pull request"],
   "require": {
-    "php": "^7.1",
+    "php": "^7.1 || ^8.1",
     "ptlis/diff-parser": "^0.6",
     "mnapoli/silly": "^1.7",
     "php-di/php-di": "^5.4"
