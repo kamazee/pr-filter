@@ -30,8 +30,7 @@ class LoaderTest extends TestCase
             ->getMock();
 
         $fileMock->expects($this->once())
-            ->method('assertFileIsReadable')
-            ->willReturn(null);
+            ->method('assertFileIsReadable');
 
         /** @var MockObject|FileFactory $fileFactoryMock */
         $fileFactoryMock = $this->getMockBuilder(FileFactory::class)

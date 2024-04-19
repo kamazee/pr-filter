@@ -13,7 +13,7 @@ class FileTest extends TestCase
     /** @var vfsStreamDirectory */
     private $vfs;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->vfs = vfsStream::setup();
     }
@@ -96,7 +96,7 @@ class FileTest extends TestCase
             ->chmod(0200);
 
         $this->expectException(FileException::class);
-        $this->expectExceptionMessageRegExp(
+        $this->expectExceptionMessageMatches(
             sprintf('#Reading %s failed.*file_get_contents.*#', $file->url())
         );
 
@@ -108,8 +108,7 @@ class FileTest extends TestCase
 
         // ... but asserts will pass; we pretend
         // that permission are changed after asserts have been made
-        $mock->method('assertFileIsReadable')
-            ->willReturn(null);
+        $mock->method('assertFileIsReadable');
 
         $mock->read();
     }
