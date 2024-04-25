@@ -20,12 +20,12 @@ class FileExceptionTest extends TestCase
         error_clear_last();
         $exception = FileException::readingFailed($filename, $error);
 
-        $this->assertRegExp(
+        $this->assertMatchesRegularExpression(
             sprintf('#\b%s\b#', preg_quote($filename, '#')),
             $exception->getMessage()
         );
 
-        $this->assertRegExp(
+        $this->assertMatchesRegularExpression(
             sprintf('#\b%s\b#', preg_quote($errorText)),
             $exception->getMessage()
         );
@@ -42,12 +42,12 @@ class FileExceptionTest extends TestCase
         $errorText = 'Unknown error';
         $exception = FileException::readingFailed($filename, $emptyError);
 
-        $this->assertRegExp(
+        $this->assertMatchesRegularExpression(
             sprintf('#\b%s\b#', preg_quote($filename, '#')),
             $exception->getMessage()
         );
 
-        $this->assertRegExp(
+        $this->assertMatchesRegularExpression(
             sprintf('#\b%s\b#', preg_quote($errorText)),
             $exception->getMessage()
         );

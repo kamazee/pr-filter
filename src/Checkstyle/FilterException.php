@@ -9,6 +9,6 @@ class FilterException extends Exception
 {
     public static function cantReadCheckstyle(XmlException $e, string $filename)
     {
-        return new self("Can't load XML from $filename", null, $e);
+        return new self("Can't load XML from $filename", 0, $e);
     }
 }
