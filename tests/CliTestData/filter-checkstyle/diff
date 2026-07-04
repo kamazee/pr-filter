@@ -1,0 +1,10 @@
+diff --git a/src/MyBiggerClass.php b/src/MyBiggerClass.php
+index 1111111..2222222 100644
+--- a/src/MyBiggerClass.php
++++ b/src/MyBiggerClass.php
+@@ -8,4 +8,4 @@ class MyBiggerClass
+     public function bar()
+     {
+-        return false;
++        return true; 
+     }

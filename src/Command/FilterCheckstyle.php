@@ -33,5 +33,7 @@ class FilterCheckstyle
 
         (new Filter($this->loader, $processedDiff))
             ->filter($infile, $outfile, $basePath);
+
+        return 0;
     }
 }

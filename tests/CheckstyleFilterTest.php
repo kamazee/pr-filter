@@ -127,7 +127,9 @@ class CheckstyleFilterTest extends TestCase
             ->newInstanceWithoutConstructor();
 
         $property = new ReflectionProperty(Diff::class, 'files');
-        $property->setAccessible(true);
+        if (PHP_VERSION_ID < 80500) {
+            $property->setAccessible(true);
+        }
         $property->setValue($mock, $files);
 
         return $mock;

@@ -1,4 +1,8 @@
+/.composer
 /composer.phar
 /composer.lock
 /vendor/
-.idea
+
+/.idea/
+/.phpunit.result.cache
+/.*sh_history
